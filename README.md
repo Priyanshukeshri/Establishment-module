@@ -26,8 +26,7 @@ This project is an interactive leave application portal which includes Employee 
 4. Open HTML Folder and run index.html file
 
 5.Screeshot
-![Screenshot (78)](https://user-images.githubusercontent.com/28379493/145877730-75e4ed10-d28d-4476-b5ad-ec03cc81e3d0.png)
 
 ![Screenshot (76)](https://user-images.githubusercontent.com/28379493/145877692-95e8bb6e-4004-4004-9a56-ec486434ba56.png)
 
-
+![Screenshot (78)](https://user-images.githubusercontent.com/28379493/145877730-75e4ed10-d28d-4476-b5ad-ec03cc81e3d0.png)
