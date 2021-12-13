@@ -1,0 +1,76 @@
+<% include ./partial/header %> <% include ./partial/studfunction %> 
+<div
+  class="col-sm-6"
+  style="    flex: 0 0 50%;
+max-width: 60%;
+margin-left: 431px;
+margin-top: -181px;  text-align: -webkit-center;"
+>
+<div class="container" >
+    <table class="content-table"
+    style="margin: 50px auto;min-width:400px;width: 90%; box-shadow: 0 0 20px rgba(0,0,0,0.15);">
+      <tr
+      style="background-color: rgb(9, 1, 19); border-radius: 5px 5px 0 0;overflow: hidden;  color: #ffffff;text-align: left; font-weight: bold;"
+      >
+        <th>
+          Subject
+        </th>
+        <th>
+          From
+        </th>
+        <th>To</th>
+        <th>Days</th>
+        <th>Director Status</th>
+        <th>Admin Status</th>
+        <th>Final Status</th>
+        
+      </tr>
+      <%employee.leaves.forEach(function(leave){%>
+
+      <tr>
+        <td><%=leave.subject%></td>
+        <td><%=moment(leave.from).format('DD/MM/YYYY')%></td>
+        <td><%=moment(leave.to).format('DD/MM/YYYY')%></td>
+        <td><%=leave.days%></td>
+        <td><%=leave.status%></td>
+        <td><%=leave.adminstatus%></td>
+        <%if(leave.status==="approved" && leave.adminstatus==="approved"){%>
+         <%leave.finalstatus="approved"%>
+        <%}%>
+        <%if(leave.status==="denied" && leave.adminstatus==="denied"){%>
+          <%leave.finalstatus="denied"%>
+         <%}%>
+         <%if(leave.status==="denied" && leave.adminstatus==="approved"){%>
+          <%leave.finalstatus="denied"%>
+         <%}%>
+         <%if(leave.status==="approved" && leave.adminstatus==="denied"){%>
+          <%leave.finalstatus="denied"%>
+         <%}%>
+        <td><%=leave.finalstatus%></td>
+      </tr>
+
+      <%})%>
+    </table>
+  </div>
+  </div>
+  
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<% include
+./partial/footer %>

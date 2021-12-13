@@ -1,0 +1,21 @@
+<% include ./partial/header %> <% include ./partial/adminfunction%>
+
+
+<div class="col-sm-6" style="    flex: 0 0 50%;
+max-width: 50%;
+margin-left: 431px;
+margin-top: -251px;border: 1px solid pink ;  text-align: -webkit-center;">
+      <div class="thumbnail">
+        <img style="height:150px;width:150px;border-radius: 100%" src="<%=admin.image%>" />
+        <h1><strong>Name:</strong> <%=admin.name%></h1>
+        <h4><strong>Type:</strong><%=admin.type%></h4>
+
+        <h4>Username: <%=admin.username%></h4>
+        <h4>Email Id:<%=admin.Email%></h4>
+      </div>
+      <a class="btn btn-warning" href="/admin/<%=admin._id%>/edit">Edit</a>
+    </div>
+  </div>
+</div>
+
+<% include ./partial/footer %>

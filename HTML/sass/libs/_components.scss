@@ -1,0 +1,168 @@
+/*
+ * Reusable Components Style
+ */
+
+.button{
+	border: 2px solid $accent-color;
+	background: none;
+	padding: 10px 20px;
+	position: relative;
+	margin: 20px 0;
+	display: inline-block;
+	transition: .3s ease;
+
+	&:before,&:after{
+		content:" ";
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		background: $bg-color;
+		transition: .3s ease;
+	}
+
+	&:hover{
+		border-color: white;
+		color: white;
+
+		&:before, &:after{
+			border-color: white;
+		}
+	}
+
+	&:before{
+		border-bottom: 2px solid $accent-color;
+		transform: rotate(-45deg);
+		top:-10px;
+		left: -10px;
+	}
+	&:after{
+		border-top: 2px solid $accent-color;	
+		transform: rotate(-45deg);
+		bottom:-10px;
+		right: -10px;
+	}
+}
+
+.button-back{
+	display:inline-block;
+	padding: 10px 30px;
+	margin-bottom: 50px;
+	position: relative;
+	border: 2px solid #383838;
+	color: $body-color;
+	text-transform: uppercase;
+
+	img{margin-right: 10px}
+	&:before,&:after{
+		content:" ";
+		width: 20px;
+		height: 20px;
+		position: absolute;
+		background: $bg-color;
+	}
+
+	&:before{
+		border-bottom: 2px solid #383838;
+		transform: rotate(-45deg);
+		top:-10px;
+		left: -10px;
+	}
+	&:after{
+		border-top: 2px solid #383838;	
+		transform: rotate(-45deg);
+		bottom:-10px;
+		right: -10px;
+	}
+}
+
+.map{
+	min-height: 400px;
+}
+
+.contact-detail{
+	padding: 30px 0;
+	address,.phone,.email{
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 20px;
+		color: $body-color;
+
+
+		p{
+			margin: 0;
+			@include em(14);
+			line-height: 1.5;
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+	.contact-icon{
+		display: inline-block;
+		vertical-align: middle;
+		width: 40px;
+		height: 40px;
+		border: 2px solid #383838;
+		text-align: center;
+		position: relative;
+		margin-right: 20px;
+
+		&:before,&:after{
+			content:" ";
+			width: 10px;
+			height: 10px;
+			position: absolute;
+			background: $bg-color;
+		}
+
+		&:before{
+			border-bottom: 2px solid #383838;
+			transform: rotate(-45deg);
+			top:-5px;
+			left: -5px;
+		}
+		&:after{
+			border-top: 2px solid #383838;	
+			transform: rotate(-45deg);
+			bottom:-5px;
+			right: -5px;
+		}
+
+		img{
+			display: inline-block;
+			margin-top: 10px;
+		}
+	}
+}
+
+.contact-form{
+
+	input:not([type="submit"]),textarea{ width: 100%; }
+	.text-right{text-align: right}
+
+	button{
+		position: relative;
+		color: $accent-color;
+
+		&:before,&:after{
+			content:" ";
+			width: 20px;
+			height: 20px;
+			position: absolute;
+			background: $bg-color;
+		}
+
+		&:before{
+			border-bottom: 2px solid $accent-color;
+			transform: rotate(-45deg);
+			top:-10px;
+			left: -10px;
+		}
+		&:after{
+			border-top: 2px solid $accent-color;	
+			transform: rotate(-45deg);
+			bottom:-10px;
+			right: -10px;
+		}
+	}
+}

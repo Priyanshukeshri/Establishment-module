@@ -1,0 +1,96 @@
+<% include ./partial/header %>
+<div
+  class="container"
+  style=" position: relative;
+border-radius: 5px;
+background-color: #f2f2f2;
+padding: 60px 0 30px 0;
+width: 40%;
+
+"
+>
+
+    
+    
+      <form action="/employee/<%=employee._id%>?_metdirector=PUT" metdirector="POST" style="margin-top: 20px;">
+        <div class="row">
+          <div class="col">
+              <h1 style="text-align:center;">Edit Profile <%= employee.name%></h1>
+              <div class=" form-group form-inline">
+                  <label for="name" style="width: 200px;
+                  display: inline-block;
+                  text-align: right;
+                  ">Name</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="name"
+                    value="<%= employee.name%>"
+                    name="employee[name]"
+                  />
+                </div>
+                <div class=" form-group form-inline">
+                    <label for="username" style="width: 200px;
+                    display: inline-block;
+                    text-align: right;
+                    ">Username</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="username"
+                    value="<%= employee.username%>"
+                    name="employee[username]"
+                  />
+                </div>
+                <div class=" form-group form-inline">
+                    <label for="department" style="width: 200px;
+                    display: inline-block;
+                    text-align: right;
+                    ">Department</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="department"
+                    value="<%= employee.department%>"
+                    name="employee[department]"
+                  />
+                </div>
+                <div class=" form-group form-inline">
+                    <label for="Email" style="width: 200px;
+                    display: inline-block;
+                    text-align: right;
+                    ">Email Id</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="Email"
+                    value="<%= employee.Email%>"
+                    name="employee[Email]"
+                  />
+                </div>
+                <div class=" form-group form-inline">
+                    <label for="url" style="width: 200px;
+                    display: inline-block;
+                    text-align: right;
+                    ">Image-url</label>
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="url"
+                    value="<%= employee.image%>"
+                    name="employee[image]"
+                  />
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-lg btn-default btn-block">Submit</button>
+                </div>
+          </div>
+        </div>
+        
+      </form>
+      <a href="/employee/<%= employee.id%>">Back</a>
+    </div>
+  </div>
+</div>
+
+<% include ./partial/footer %>

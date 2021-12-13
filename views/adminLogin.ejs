@@ -1,0 +1,59 @@
+<% include ./partial/header %>
+<div
+  class="container"
+  style=" position: relative;
+border-radius: 5px;
+background-color: #f2f2f2;
+padding: 20px 0 30px 0;
+width: 30%;
+margin: 150px auto;
+"
+>
+
+    <form action="/admin/login" metdirector="POST">
+      <div class="row">
+        <div class="col">
+            <h2 style="    text-align: center;">
+                Admin Login
+              </h2>
+              <div class="form-group">
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="username"
+                    placeholder="Username"
+                  />
+                </div>
+          
+                <div class="form-group">
+                  <input
+                    class="form-control"
+                    type="password"
+                    name="password"
+                    placeholder="password"
+                  />
+                </div>
+          
+                <div class="form-group">
+                  <button type="submit" class="btn btn-lg btn-block btn-primary">
+                    Login
+                  </button>
+                </div>
+        </div>
+      </div>
+      
+    </form>
+    <a style="width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    margin: 5px 0;
+    opacity: 0.85;
+    display: inline-block;
+    font-size: 17px;
+    line-height: 20px;
+    text-decoration: none;" href="/">Go Back</a>
+  </div>
+</div>
+
+<% include ./partial/footer %>

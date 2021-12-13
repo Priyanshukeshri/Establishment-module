@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  position: relative;
+  font-family: "Comfortaa", cursive;
+  -webkit-font-smoothing: antialiased;
+  /* overflow: hidden; */
+}
+.jumbotron {
+  z-index: 1;
+  position: relative;
+}
+.contact {
+  position: relative;
+  z-index: 2;
+}
+.btn {
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.btn:hover {
+  background-color: #4caf50; /* Green */
+  color: white;
+}
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: rgb(127, 126, 196);
+}
+
+.btn:hover {
+  opacity: 8;
+}
+a {
+  color: rgb(127, 126, 196);
+  text-decoration: none;
+}
+p {
+  margin: 0.5rem 0;
+}
+.col {
+  float: left;
+  width: 50%;
+  margin: auto;
+  padding: 0 50px;
+  margin-top: 6px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.carousel {
+  margin-bottom: 60px;
+}
+.fixed-height {
+  max-height: 400px;
+}
+.carousel-item {
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  background-size: 100% 100%;
+}
+/* .carousel-inner img {
+  max-width: 50%;
+  height: auto;
+} */
+
+.carousel-caption h5 {
+  font-size: 45px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 25px;
+}
+.carousel-caption p {
+  width: 75%;
+  margin: auto;
+  font-size: 20px;
+  line-height: 1.9;
+}
+li a:hover {
+  background-color: #535555;
+}
+
+.navbar-default {
+  background-color: #000000;
+  border-color: #e7e7e7;
+  color: #fff;
+  height: 47px;
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  width: 100%;
+}
+.navbar-brand {
+  color: #fff;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.navbar-dark .nav-link {
+  font-weight: bold;
+}
+.navbar-nav .nav-item {
+  color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+  width: 100px;
+}
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+}
+.content-table thead tr {
+  background-color: #009879;
+}
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+.content-table tbody tr:nth-last-of-type(even) {
+  background-color: #f3f3f3;
+}
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid rgb(9, 1, 19);
+}

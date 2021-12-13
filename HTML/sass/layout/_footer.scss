@@ -1,0 +1,70 @@
+/*
+ * Footer Styles
+ */
+
+.site-footer{
+	margin-top: 50px;
+
+	.container{
+		border-top: 1px solid #383838;
+		padding: 50px 15px 30px;
+		position: relative;
+		@include clearfix;
+	}
+	address,.phone{
+		display: inline-block;
+		margin-right: 20px;
+	}
+	.phone{
+		@include em(18);
+	}
+	.colophon{
+		padding-top: 30px;
+		clear: both;
+	}
+
+	.social-links{
+		a{
+			width: 40px;
+			height: 40px;
+			border: 2px solid #383838;
+			position: relative;
+			display: inline-block;
+			text-align: center;
+			margin-left: 10px;
+			color: $body-color;
+			line-height: 2.5;
+			transition: .3s ease;
+
+			&:hover{
+				border-color: $accent-color;
+
+				&:before, &:after{
+					border-color: $accent-color;
+				}
+			}
+
+			&:before,&:after{
+				content:" ";
+				width: 10px;
+				height: 10px;
+				position: absolute;
+				background: $bg-color;
+				transition: .3s ease;
+			}
+
+			&:before{
+				border-bottom: 2px solid #383838;
+				transform: rotate(-45deg);
+				top:-5px;
+				left: -5px;
+			}
+			&:after{
+				border-top: 2px solid #383838;	
+				transform: rotate(-45deg);
+				bottom:-5px;
+				right: -5px;
+			}
+		}
+	}
+}

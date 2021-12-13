@@ -1,0 +1,46 @@
+<script>
+  $(document).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
+<h1 style="margin-top: 61px; font-size: 20px;">Welcome, <%=director.name%></h1>
+<div class="container">
+  <div
+    class="row"
+    style="    margin-left: -36px;
+  margin-right: 899px;"
+  >
+    <div class="col-sm-3" style="list-style-type: none;">
+      <li>
+        <a
+          href="/director/home"
+          data-toggle="tooltip"
+          title="home page"
+          data-placement="left"
+          class="btn btn-info btn-lg"
+          style="width: 210px;margin-top: 10px;"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          href="/director/<%=director._id%>"
+          data-toggle="tooltip"
+          title="Click to see your profile"
+          data-placement="left"
+          class="btn btn-info btn-lg"
+          style="width: 210px;margin-top: 10px;"
+          >Profile</a
+        >
+      </li>
+      <li>
+        <a
+          href="/director/<%=director._id%>/leave"
+          class="btn btn-info btn-lg"
+          style="width: 210px;margin-top: 10px;"
+          >Leave</a
+        >
+      </li>
+    </div>
+  </div>
+</div>

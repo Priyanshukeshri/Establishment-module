@@ -1,0 +1,95 @@
+<% include ./partial/header %>
+<div class="container"
+style=" position: relative;
+border-radius: 5px;
+background-color: #f2f2f2;
+padding: 20px 0 30px 0;
+width: 40%;
+
+">
+  
+      <form action="/admin/<%=admin._id%>?_metdirector=PUT" metdirector="POST">
+        <div class="row">
+          <div class="col">
+            <h1 style="text-align:center;">Edit Profile<%= admin.name%></h1>
+            <div class="form-group form-inline">
+              <label
+                for="name"
+                style="width: 200px;
+                    display: inline-block;
+                    text-align: right;
+                    "
+                >Name</label
+              >
+              <input
+                class="form-control"
+                type="text"
+                id="name"
+                value="<%= admin.name%>"
+                name="admin[name]"
+              />
+            </div>
+            <div class="form-group form-inline">
+              <label
+                for="username"
+                style="width: 200px;
+                    display: inline-block;
+                    text-align: right;
+                    "
+                >Username</label
+              >
+              <input
+                class="form-control"
+                type="text"
+                id="username"
+                value="<%= admin.username%>"
+                name="admin[username]"
+              />
+            </div>
+            <div class="form-group form-inline">
+              <label
+                for="Email"
+                style="width: 200px;
+                    display: inline-block;
+                    text-align: right;
+                    "
+                >Email Id</label
+              >
+              <input
+                class="form-control"
+                type="text"
+                id="Email"
+                value="<%= admin.Email%>"
+                name="admin[Email]"
+              />
+            </div>
+
+            <div class="form-group form-inline">
+              <label
+                for="url"
+                style="width: 200px;
+                    display: inline-block;
+                    text-align: right;
+                    "
+                >Image-url</label
+              >
+              <input
+                class="form-control"
+                type="text"
+                id="url"
+                value="<%= admin.image%>"
+                name="admin[image]"
+              />
+            </div>
+            <div class="form-group">
+              <button class="btn btn-lg btn-primary btn-block">Submit</button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <a href="/admin/profile">Back</a>
+    </div>
+  </div>
+</div>
+
+<% include ./partial/footer %>

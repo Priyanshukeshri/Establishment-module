@@ -1,0 +1,16 @@
+// Font family
+$primary-font      : "Roboto Condensed", "Open Sans", sans-serif;
+
+
+// Color Variables
+$accent-color      : #f4c545;
+$primary-color     : $accent-color;
+$secondary-color   : #ebebeb;
+
+$bg-color          : #212121;
+$body-color        : #d3d3d3;
+$muted-color       : #585858;
+
+// Grid system
+$grid-columns      : 12 !default;
+$grid-gutter-width : 30px !default;

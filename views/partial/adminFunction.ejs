@@ -1,0 +1,50 @@
+<script>
+  $(document).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+</script>
+<h1 style="margin-top: 61px; font-size: 20px;">Welcome, <%=admin.name%></h1>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3" style="list-style-type: none;">
+      <li>
+        <a
+          href="/admin/home"
+          data-toggle="tooltip"
+          title="home page"
+          data-placement="left"
+          class="btn btn-primary btn-lg"
+          style="width: 210px;margin-top: 10px;background-color: black"
+          >Home</a
+        >
+      </li>
+      <li>
+        <a
+          href="/admin/<%=admin._id%>"
+          data-toggle="tooltip"
+          title="Click to see your profile"
+          data-placement="left"
+          class="btn btn-primary btn-lg"
+          style="width: 210px;margin-top: 10px;"
+          >Profile</a
+        >
+      </li>
+      <li>
+        <a
+          href="/admin/<%=admin._id%>/leave"
+          class="btn btn-success btn-lg"
+          style="width: 210px;margin-top: 10px;"
+          >Leave</a
+        >
+      </li>
+      <li>
+        <a
+          href="#"
+          class="btn btn-info btn-lg"
+          style="width: 210px;margin-top: 10px;"
+          >Track Leave</a
+        >
+      </li>
+    </div>
+  </div>
+</div>

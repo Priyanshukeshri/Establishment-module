@@ -1,0 +1,50 @@
+<% include ./partial/header %><% include ./partial/directorfunction %>
+<div
+  class="col-sm-6"
+  style="    flex: 0 0 50%;
+    max-width: 60%;
+    margin-left: 431px;
+    margin-top: -251px;  text-align: -webkit-center;"
+>
+  <form action="/director/<%=director.id%>/leave/<%=employee.id%>/info" metdirector="POST">
+    <div class="container-fluid bg-3 text-center">
+      <h1 style="margin-top: 40px;"><%=employee.name %></h1>
+      <br />
+      <div class="row">
+        <div class="col-sm-4">
+          <img
+            style="height:150px;width:150px;border-radius: 100%"
+            src="<%=employee.image%>"
+            alt="image"
+          />
+        </div>
+        <%employee.leaves.forEach(function(leave){%>
+        <div class="col-sm-4" style="width: 100%">
+          <h3><strong> Subject:</strong><%=leave.subject %></h3>
+          <h3>Status:<%=leave.status %></h3>
+          <h3>From:<%=moment(leave.to).format('DD/MM/YYYY') %></h3>
+          <h3>To:<%=moment(leave.from).format('DD/MM/YYYY') %></h3>
+          <h3><%=leave.days%></h3>
+          <h3>Department:<%=employee.department %></h3>
+          <div class="col-sm-6">
+            <input
+              type="submit"
+              class="btn btn-block btn-success"
+              name="action"
+              value="Approve"
+            />
+            <input
+              type="submit"
+              class="btn btn-block btn-danger"
+              name="action"
+              value="Deny"
+            />
+          </div>
+        </div>
+
+        <%})%>
+      </div>
+    </div>
+  </form>
+  <% include ./partial/footer %>
+</div>

@@ -1,0 +1,28 @@
+{
+  "name": "employeeleavemanagement",
+  "version": "1.0.0",
+  "description": "This project is an interactive leave application portal which includes Employee login,Director login and Admin Login. Employee can apply leaves and view their leave status. Director can either accept or reject the leave for employee studying in his/her department. Admin can either accept or reject the leave for employee .",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "ejs": "^2.6.1",
+    "express": "^4.17.1",
+    "express-session": "^1.16.1",
+    "express-validator": "^5.3.1",
+    "method-override": "^3.0.0",
+    "moment": "^2.24.0",
+    "mongoose": "^5.13.13",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^5.0.1"
+  },
+  "devDependencies": {}
+}

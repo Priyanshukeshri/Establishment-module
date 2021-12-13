@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>NIT Jamshedpur - Cradle of technical excellence</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.7.1/css/bootstrap-datepicker.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Comfortaa&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/stylesheets/app.css" />
+  </head>
+  <body data-spy="scroll" data-target="#mainNavbar" data-offset="10">
+    <nav
+      id="mainNavbar"
+      class="navbar navbar-default navbar-expand-lg navbar-dark navbar-fixed-top"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="/">L.M.S</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul
+            class="navbar-nav ml-auto"
+            style=" list-style-type: none;
+          margin: 0;
+          padding: 0;
+          width: 363px;"
+          >
+            <% if(user){%>
+            <!-- <li><a href="#">Signed in as <%= user.type%></a></li> -->
+
+            <li class="nav-item">
+              <a class="nav-link " style="margin-left: 284px" href="/logout"
+                >Logout
+              </a>
+            </li>
+
+            <%}%> <% if(!user){%>
+            <li class="nav-item">
+              <a class="nav-link" href="HTML/index.html">Home </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/register">Register </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Login
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item" href="/employee/login">Employee</a>
+                </li>
+                <li><a class="dropdown-item" href="/director/login">Director</a></li>
+
+                <li>
+                  <a class="dropdown-item" href="/admin/login">Admin</a>
+                </li>
+              </ul>
+            </li>
+            <%}%>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <% if(error && error.length >0){%>
+      <div
+        class="alert alert-danger"
+        style="position: relative;top: 100px;"
+        role="alert"
+      >
+        <%= error %>
+      </div>
+      <% } %> <% if(success && success.length >0){%>
+      <div class="alert alert-success" style="top:100px;" role="alert">
+        <%= success %>
+      </div>
+      <% } %>
+    </div>
+  </body>
+</html>

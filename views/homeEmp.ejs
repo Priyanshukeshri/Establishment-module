@@ -1,0 +1,55 @@
+<% include ./partial/header %>
+<% include ./partial/studfunction %> 
+<div
+class="col-sm-6"
+style="    flex: 0 0 50%;
+max-width: 60%;
+margin-left: 431px;
+margin-top: -181px;  text-align: -webkit-center;"
+>
+      <div class="thumbnail">
+        <img
+          style="height:150px;width:150px;border-radius: 100%"
+          src="<%=employee.image%>"
+        />
+        <h1><strong>Name:</strong> <%=employee.name%></h1>
+        <h4><strong>Type:</strong><%=employee.type%></h4>
+
+        <h4>Username: <%=employee.username%></h4>
+        <h4>Department:<%=employee.department%></h4>
+        <h4>Email Id: <%=employee.Email%></h4>
+      </div>
+    </div>
+
+    <div class="container" >
+      <table class="content-table"
+      style="margin: 50px auto;min-width:400px;width: 90%; box-shadow: 0 0 20px rgba(0,0,0,0.15);">
+        <tr  style="background-color: rgb(9, 1, 19); border-radius: 5px 5px 0 0;overflow: hidden;  color: #ffffff;text-align: left; font-weight: bold;"
+        >
+          <th>
+            Subject
+          </th>
+          <th>
+            From
+          </th>
+          <th>To</th>
+          <th>Days</th>
+          <th>Status</th>
+        </tr>
+        <%employee.leaves.forEach(function(leave){%>
+
+        <tr>
+          <td><%=leave.subject%></td>
+          <td><%=moment(leave.from).format('DD/MM/YYYY')%></td>
+          <td><%=moment(leave.to).format('DD/MM/YYYY')%></td>
+          <td><%=leave.days%></td>
+          <td><%=leave.finalstatus%></td>
+        </tr>
+
+        <%})%>
+      </table>
+    </div>
+
+    <% include ./partial/footer %>
+  </div>
+</div>

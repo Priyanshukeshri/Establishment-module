@@ -1,0 +1,81 @@
+<% include ./partial/header %>
+<div
+  class="container"
+  style=" position: relative;
+border-radius: 5px;
+background-color: #f2f2f2;
+padding: 20px 0 30px 0;
+width: 40%;
+
+"
+>
+  
+      <form action="/director/<%=director._id%>?_metdirector=PUT" metdirector="POST">
+        <div class="row">
+          <div class="col">
+            <h1 style="text-align:center;">Edit Profile <%= director.name%></h1>
+            <div class="form-group form-inline">
+                <label for="name" style="width: 200px;
+                display: inline-block;
+                text-align: right;
+                ">Name</label>
+              <input
+                class="form-control"
+                type="text"
+                id="name"
+                value="<%= director.name%>"
+                name="director[name]"
+              />
+            </div>
+            <div class="form-group form-inline">
+                <label for="username" style="width: 200px;
+                display: inline-block;
+                text-align: right;
+                ">Username</label>
+              <input
+                class="form-control"
+                type="text"
+                id="username"
+                value="<%= director.username%>"
+                name="director[username]"
+              />
+            </div>
+            <div class="form-group form-inline">
+                <label for="department" style="width: 200px;
+                display: inline-block;
+                text-align: right;
+                ">Department</label>
+              <input
+                class="form-control"
+                type="text"
+                id="department"
+                value="<%= director.department%>"
+                name="director[department]"
+              />
+            </div>
+
+            <div class="form-group form-inline">
+                <label for="url" style="width: 200px;
+                display: inline-block;
+                text-align: right;
+                ">Image Url</label>
+              <input
+                class="form-control"
+                type="text"
+                id="url"
+                value="<%= director.image%>"
+                name="director[image]"
+              />
+            </div>
+            <div class="form-group">
+              <button class="btn btn-lg btn-default btn-block">Submit</button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <a href="/director/profile">Back</a>
+    </div>
+  </div>
+</div>
+
+<% include ./partial/footer %>
