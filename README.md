@@ -23,5 +23,5 @@ This project is an interactive leave application portal which includes Employee 
    ```bash
    node app.js
    ```
-4. Open the url `http://localhost:3005` in browser for seeing the result
+4. Open HTML Folder and run index.html file
 
